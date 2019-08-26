@@ -9,4 +9,6 @@ setup(name='sharepy',
       author_email='jonathan.holvey@outlook.com',
       license='GPLv3',
       packages=['sharepy'],
-      zip_safe=False)
+      zip_safe=False,
+      include_package_data=True,
+      package_data={"sharepy": ["saml-templates/*.xml"]})
