@@ -158,8 +158,7 @@ class SharePointADFS(requests.auth.AuthBase):
     def __call__(self, request):
         """Inject cookies into requests as they are made"""
         if self.cookie and self.digest:
-            request.headers.update({"Content-Type": "text/xml; charset=utf-8",
-                                    "Cookie" : self.cookie})
+            request.headers.update({"Cookie": self.cookie})
         return request
 
     def login(self, site):
